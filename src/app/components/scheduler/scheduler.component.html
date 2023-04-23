@@ -1,0 +1,20 @@
+<p>Simple smart scheduler</p>
+
+<dx-scheduler
+  fieldExpr="id"
+  [dataSource]="appointmentsData$ | async"
+  [views]="['week', 'month']"
+  currentView="week"
+  [currentDate]="currentDate"
+  [startDayHour]="9"
+  [height]="600"
+  (onAppointmentAdding)="addAppointment($event)"
+  (onAppointmentUpdating)="editAppointment($event)"
+  (onAppointmentDeleting)="deleteAppointment($event)"
+>
+  <dxi-resource
+    fieldExpr="holidayId"
+    label="Holiday"
+    [dataSource]="holidaysData$ | async"
+  ></dxi-resource>
+</dx-scheduler>
