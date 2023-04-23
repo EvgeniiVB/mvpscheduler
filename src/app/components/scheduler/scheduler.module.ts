@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DxButtonModule } from 'devextreme-angular';
 import { SchedulerComponent } from './scheduler.component';
-import { DxSchedulerModule } from 'devextreme-angular';
+import { DxSchedulerModule } from 'devextreme-angular/ui/scheduler';
 
 @NgModule({
-  imports: [CommonModule, DxButtonModule, DxSchedulerModule],
+  imports: [CommonModule, DxSchedulerModule],
   exports: [SchedulerComponent, DxSchedulerModule],
   declarations: [SchedulerComponent],
 })
